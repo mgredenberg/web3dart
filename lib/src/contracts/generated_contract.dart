@@ -56,7 +56,7 @@ abstract class GeneratedContract {
   }
 
   Transaction getTransaction(
-    Credentials credentials,
+    Credentials? credentials,
     Transaction? base,
     ContractFunction function,
     List<dynamic> parameters,
