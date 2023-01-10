@@ -54,4 +54,22 @@ abstract class GeneratedContract {
       fetchChainIdFromNetworkId: chainId == null,
     );
   }
+
+  Transaction getTransaction(
+    Credentials credentials,
+    Transaction? base,
+    ContractFunction function,
+    List<dynamic> parameters,
+  ) {
+    final transaction = base?.copyWith(
+          data: function.encodeCall(parameters),
+          to: self.address,
+        ) ??
+        Transaction.callContract(
+          contract: self,
+          function: function,
+          parameters: parameters,
+        );
+    return transaction;
+  }
 }
