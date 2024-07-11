@@ -19,16 +19,8 @@ void main() {
 
   const sam = ContractFunction(
     'sam',
-    [
-      FunctionParameter('b1', DynamicBytes()),
-      FunctionParameter('b2', BoolType()),
-      FunctionParameter('b3', DynamicLengthArray(type: UintType()))
-    ],
-    outputs: [
-      FunctionParameter('b1', DynamicBytes()),
-      FunctionParameter('b2', BoolType()),
-      FunctionParameter('b3', DynamicLengthArray(type: UintType()))
-    ],
+    [FunctionParameter('b1', DynamicBytes()), FunctionParameter('b2', BoolType()), FunctionParameter('b3', DynamicLengthArray(type: UintType()))],
+    outputs: [FunctionParameter('b1', DynamicBytes()), FunctionParameter('b2', BoolType()), FunctionParameter('b3', DynamicLengthArray(type: UintType()))],
   );
 
   test('parses contract abi', () {

@@ -44,7 +44,7 @@ analyzer:
     prefer_is_empty: error
     prefer_final_fields: error
     prefer_single_quotes: error
-    require_trailing_commas: error
+    require_trailing_commas: ignore
     sized_box_for_whitespace: error
     sort_constructors_first: error
     sort_unnamed_constructors_first: error
